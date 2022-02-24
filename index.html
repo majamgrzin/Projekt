@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://kit.fontawesome.com/7c1106c071.js"></script>
+
+    <title>CC Landing Page</title>
+
+</head>
+
+<body>
+    <!--Start Headbereich-->
+    <header class="kopfbereich">
+        <div class="container">
+            <h1 class="u1">Grow your business!</h1>
+            <!-- Switch 
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>-->
+            <h4 class="u2">mit uns nur nach Oben</h4>
+            <img src="img/bckg-image.jpg" class="bckg-image" width="400">
+            <button type="submit" class="btn">Los geht's!</button>
+            <img src="img/CoraxCommunicationsLogo.png" class="logo" width="300">
+            <button onclick="topFunction()" class="btn-up" id="btnUp"><i class="fas fa-chevron-up"></i></button>
+        </div>
+    </header>
+    <!--Ende Headbereich-->
+
+    <!--Start Pop up Formular-->
+    <div class="formular" id="formular">
+        <div class="container">
+            <h2 class="formular_heading">Anmelden Sie sich:</h2>
+            <form class="register">
+                <div class="row">
+                    <div class="col-6 col-s-6">
+                        <select class="standardform" id="anrede">
+                            <option value="frau">Frau</option>
+                            <option value="herr">Herr</option>
+                            <option value="-">-</option>
+                        </select>
+                        <input class="standardform" id="name" type="text" placeholder="Name" required>
+                        <input class="standardform" id="nachname" type="text" placeholder="Nachname" required>
+                    </div>
+                    <div class="col-6 col-s-6">
+                        <input class="standardform" id="geburtstag" type="text" placeholder="01.02.1900" required>
+                        <input class="standardform" id="email" type="text" placeholder="muster@mail.com" required>
+                        <input class="standardform" id="nummer" type="text" placeholder="+43 123436">
+                    </div>
+                </div>
+                <input type="checkbox" class="checkbox">
+                <label class="checkbeschriftung">
+                    Hiermit bestätige ich, das die oben angegebenen Daten gemäß Datenschutzrichtlinie für die
+                    Abwicklung der Anfrage und für die Kontaktaufname zu deren Beantwortung gespeichert und verarbeitet
+                    werden. Diese Einwilligung kann jederzeit widerrufen werden.
+                </label>
+                <button type="submit" class="btn-cncl">Schließen</button>
+                <button type="submit" class="btn-send">Anmelden</button>
+            </form>
+        </div>
+    </div>
+    <!--Ende Pop up Formular-->
+
+    <!--Start Danke Pop up Window-->
+    <div class="formular2" id="formular2">
+        <div class="container">
+            <h2 class="formular_heading"> „Vielen Dank für Ihr Interesse an unserem Produkt“</h2>
+            <button type="submit" class="btn-cncl2">Schließen</button>
+        </div>
+    </div>
+    <!--Ende Danke Pop up Window-->
+
+    <!--Start Servicebereich-->
+    <div class="service">
+        <div class="container swiper mySwiper">
+            <h2 class="u3">Ihre Vorteile</h2>
+            <div class="row swiper-wrapper">
+                <div id="first-element" class="col-3 col-s-6 swiper-slide">
+                    <div class="icon"><i class="far fa-clock"></i></div>
+                    <p class="description">Sie sparen<br>Zeit</p>
+                </div>
+                <div id="middle" class="col-3 col-s-6 swiper-slide">
+                    <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <p class="description">Grösseres<br>Gewinn</p>
+                </div>
+                <div id="middle" class="col-3 col-s-6 swiper-slide">
+                    <div class="icon"><i class="far fa-comments"></i></div>
+                    <p class="description">Cutomer<br>support</p>
+                </div>
+                <div id="last-element" class="col-3 col-s-6 swiper-slide">
+                    <div class="icon"><i class="fas fa-chart-line"></i></div>
+                    <p class="description">Steigender<br>Erfolg</p>
+                </div>
+            </div>
+        </div>
+        <button onclick="topFunction()" type="submit" class="btn-mehr">Hier mehr</button>
+    </div>
+    <!--Ende Servicebereich-->
+
+    <!--Start Footer-->
+    <footer class="footer">
+        <div class="container">
+            <h2 class="u4">Unser Inhouse Service</h2>
+            <p>Online Marketing</p>
+            <p>Klassisches Marketing</p>
+            <p>Erstellung von Bildern und Grafiken</p>
+            <p>Erstellung einer Basis-Website</p>
+            <p>SEO</p>
+            <p class="copyright">&copy; <b>Corax Communications | 2022</b></p>
+        </div>
+    </footer>
+    <!--Ende Footer-->
+
+    <!--JavaScript-->
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            // init: false,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 0,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 0,
+                },
+            }
+        });
+
+    </script>
+
+</body>
+
+
+</html>
